@@ -1,13 +1,14 @@
 import React from 'react';
 import Navigation from './Navigation';
+import { Box } from "@chakra-ui/react"
 
 // renders code for header, including the navigation element
 function Header({ currentPage, handlePageChange }) {
   return (
     <div>
-      <div className="d-flex flex-row justify-content-center">
+      <Box display="flex" flexDirection="row" justifyContent="center">
         <h1>David Keim</h1>
-      </div>
+      </Box>
       <Navigation currentPage={currentPage} handlePageChange={handlePageChange} />
     </div>
   );

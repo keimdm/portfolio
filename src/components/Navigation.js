@@ -1,9 +1,10 @@
 import React from 'react';
+import { Box } from "@chakra-ui/react"
 
 // reeturns code  to be renedered for navigation section, creating links that refer to handlePageChange method to change  the page being  vieweed
 function Navigation({ currentPage, handlePageChange }) {
     return (
-        <div className="d-flex flex-row justify-content-around">
+        <Box display="flex" flexDirection="row" justifyContent="space-between">
             <a
                 href="#about-me"
                 onClick={() => handlePageChange('about-me')}
@@ -28,7 +29,7 @@ function Navigation({ currentPage, handlePageChange }) {
                 className={currentPage === 'contact' ? 'bg-primary text-white w-25 text-center' : 'w-25 text-center'}
             >Contact
             </a>
-        </div>
+        </Box>
     );
 }
 

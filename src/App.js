@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import {
   ChakraProvider,
   theme,
+  Box,
 } from '@chakra-ui/react';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -33,9 +34,15 @@ function App() {
 
   return (
     <ChakraProvider theme={theme}>
-      <Header currentPage={currentPage} handlePageChange={handlePageChange} />
-      {renderPage()}
-      <Footer />
+      <Box 
+        w='100%'
+        h='100%'
+        bgGradient='linear(to-bl, green.200, pink.500)'
+      >
+        <Header currentPage={currentPage} handlePageChange={handlePageChange} />
+        {renderPage()}
+        <Footer />
+      </Box>
     </ChakraProvider>
   );
 }
