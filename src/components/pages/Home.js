@@ -28,23 +28,25 @@ function Home() {
             fontSize="5xl"
             color="gray.500"
           >
-            Hello, I'm
+            Hello, I'm&nbsp;&nbsp;
           </Text>
           <Text
               fontFamily="serif"
               fontSize="9xl"
               color="blue.700"
             >
-              &nbsp;David.
+              David.
           </Text>
         </Box>
         <Text
           color="gray.500"
+          mb={3}
         >
           View Projects
         </Text>
         <Text
           color="gray.500"
+          mb={3}
         >
           Download Resume
         </Text>
