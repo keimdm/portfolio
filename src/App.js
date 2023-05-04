@@ -8,12 +8,12 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import About from './components/pages/About';
 import Portfolio from './components/pages/Portfolio';
-import Resume from './components/pages/Resume';
+import Home from './components/pages/Home';
 import Contact from './components/pages/Contact';
 
 function App() {
 
-  const [currentPage, setCurrentPage] = useState('about-me');
+  const [currentPage, setCurrentPage] = useState('home');
 
   // deteremines which page to show
   const renderPage = () => {
@@ -23,8 +23,8 @@ function App() {
     if (currentPage === 'portfolio') {
       return <Portfolio />;
     }
-    if (currentPage === 'resume') {
-      return <Resume />;
+    if (currentPage === 'home') {
+      return <Home />;
     }
     return <Contact />;
   };
@@ -34,17 +34,22 @@ function App() {
 
   return (
     <ChakraProvider theme={theme}>
-      <Box 
-        w='100%'
-        h='100%'
-        bgGradient='linear(to-bl, yellow.50 0%, orange.100 100%)'
+      <Box
+        w="100%"
         display="flex"
-        flexDirection={{base: "column", lg: "row"}}
+        flexDirection="column"
+        bgGradient='linear(to-bl, yellow.50 0%, red.100 100%)'
         px={5}
-        py={3}
       >
-        <Header currentPage={currentPage} handlePageChange={handlePageChange} />
-        {renderPage()}
+        <Box 
+          w='100%'
+          h='100%'
+          display="flex"
+          flexDirection={{base: "column", lg: "row"}}
+        >
+          <Header currentPage={currentPage} handlePageChange={handlePageChange} />
+          {renderPage()}
+        </Box>
         <Footer />
       </Box>
     </ChakraProvider>

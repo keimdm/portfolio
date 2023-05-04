@@ -1,12 +1,18 @@
 import React from 'react';
+import { Text } from "@chakra-ui/react"
 
 // renders code for footer
 function Footer() {
   return (
-    <div className="d-flex flex-row justify-content-around bg-primary text-white">
-      <a className="text-white" href="https://github.com/keimdm">GitHub Link</a>
-      <a className="text-white" href="https://www.linkedin.com/in/david-k-a70ab03b/">LinkedIn Link</a>
-    </div>
+    <Text 
+        as="p"
+        display="flex"
+        flexDirection="row"
+        justifyContent="center"
+        color="gray.500"
+        h="5vh"
+      >Made by David Keim, 2023
+      </Text>
   );
 }
 

@@ -11,17 +11,19 @@ function Navigation({ currentPage, handlePageChange }) {
         >
             <Box
                 as="a"
-                href="#resume"
-                onClick={() => handlePageChange('resume')}
-                className={currentPage === 'resume' ? 'bg-primary text-white w-25 text-center' : 'w-25 text-center'}
+                href="#home"
+                onClick={() => handlePageChange('home')}
+                color={currentPage === 'home' ? 'blue.700' : 'gray.500'}
+                fontWeight={currentPage === 'home' ? 'bold' : 'normal'}
                 mb={3}
-            >Resume
+            >Home
             </Box>
             <Box
                 as="a"
                 href="#about-me"
                 onClick={() => handlePageChange('about-me')}
-                className={currentPage === 'about-me' ? 'bg-primary text-white w-25  text-center' : 'w-25 text-center'}
+                color={currentPage === 'about-me' ? 'blue.700' : 'gray.500'}
+                fontWeight={currentPage === 'about-me' ? 'bold' : 'normal'}
                 mb={3}
             >About Me
             </Box>
@@ -29,7 +31,8 @@ function Navigation({ currentPage, handlePageChange }) {
                 as="a"
                 href="#portfolio"
                 onClick={() => handlePageChange('portfolio')}
-                className={currentPage === 'portfolio' ? 'bg-primary text-white w-25 text-center' : 'w-25 text-center'}
+                color={currentPage === 'portfolio' ? 'blue.700' : 'gray.500'}
+                fontWeight={currentPage === 'portfolio' ? 'bold' : 'normal'}
                 mb={3}
             >Portfolio
             </Box>
@@ -37,7 +40,8 @@ function Navigation({ currentPage, handlePageChange }) {
                 as="a"
                 href="#contact"
                 onClick={() => handlePageChange('contact')}
-                className={currentPage === 'contact' ? 'bg-primary text-white w-25 text-center' : 'w-25 text-center'}
+                color={currentPage === 'contact' ? 'blue.700' : 'gray.500'}
+                fontWeight={currentPage === 'contact' ? 'bold' : 'normal'}
                 mb={3}
             >Contact
             </Box>
