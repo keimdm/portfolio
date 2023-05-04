@@ -5,12 +5,23 @@ import { Box } from "@chakra-ui/react"
 // renders code for header, including the navigation element
 function Header({ currentPage, handlePageChange }) {
   return (
-    <div>
-      <Box display="flex" flexDirection="row" justifyContent="center">
-        <h1>David Keim</h1>
+    <Box
+      w={{base: "100%", lg: "15%"}}
+    >
+      <Box 
+        as="p"
+        display="flex"
+        flexDirection="row"
+        justifyContent="start"
+        fontSize="3xl"
+        fontWeight="bold"
+        fontFamily="serif"
+        color="blue.700"
+        mb={6}
+      >DK
       </Box>
       <Navigation currentPage={currentPage} handlePageChange={handlePageChange} />
-    </div>
+    </Box>
   );
 }
 

@@ -37,7 +37,11 @@ function App() {
       <Box 
         w='100%'
         h='100%'
-        bgGradient='linear(to-bl, green.200, pink.500)'
+        bgGradient='linear(to-bl, yellow.50 0%, orange.100 100%)'
+        display="flex"
+        flexDirection={{base: "column", lg: "row"}}
+        px={5}
+        py={3}
       >
         <Header currentPage={currentPage} handlePageChange={handlePageChange} />
         {renderPage()}
