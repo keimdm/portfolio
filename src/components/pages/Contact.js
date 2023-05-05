@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { GridItem } from "@chakra-ui/react"
 
 // returns contact form and functionality
 function Contact() {
@@ -64,7 +65,16 @@ function Contact() {
 
   // returns  code  to be rendered
   return (
-    <div className="d-flex flex-column justify-content-center align-items-center">
+    <GridItem
+      colStart={3}
+      colEnd={19}
+      rowStart={1}
+      rowEnd={20}
+      display="flex"
+      flexDirection="column"
+      alignItems="center"
+      justifyContent="center"
+    >
       <h3>Contact</h3>
       <form className="form d-flex flex-column justify-content-center align-items-center">
         <input
@@ -96,7 +106,7 @@ function Contact() {
           Submit
         </button>
       </form>
-    </div>
+    </GridItem>
   );
 }
 

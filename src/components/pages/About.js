@@ -1,11 +1,20 @@
 import React from 'react';
 import pic from "../../assets/profile-pic.png";
-import { GridItem, Box, Text } from "@chakra-ui/react"
+import { GridItem } from "@chakra-ui/react"
 
 // returns about section with picture and short bio
 function About() {
   return (
-      <div className="d-flex flex-column align-items-center">
+      <GridItem
+        colStart={3}
+        colEnd={19}
+        rowStart={1}
+        rowEnd={20}
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        justifyContent="center"
+      >
         <h3>About</h3>
         <img className="w-50" src={pic} alt="Profile"></img>
         <p className="text-center">
@@ -14,7 +23,7 @@ function About() {
         <p className="text-center">
           Interested in designing games, music, and good food.
         </p>
-      </div>
+      </GridItem>
   );
 }
 
