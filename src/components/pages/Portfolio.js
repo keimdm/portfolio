@@ -6,6 +6,7 @@ import music from '../../assets/music-sequencer.png';
 import tableTennis from '../../assets/table-tennis-pic.jpg';
 import ticTacToe from '../../assets/tic-tac-toe-pic.jpg';
 import Project from './Project';
+import { GridItem } from "@chakra-ui/react"
 
 // returns  portfolio section with project cards
 function Portfolio() {
@@ -58,14 +59,23 @@ function Portfolio() {
 
   // returns  code   to be rendered by looping through projects and building a card for  each (using project  component)
   return (
-      <div className="d-flex flex-column justify-content-center align-items-center">
+      <GridItem
+        colStart={3}
+        colEnd={19}
+        rowStart={1}
+        rowEnd={20}
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        justifyContent="center"
+      >
         <h3>Portfolio</h3>
         {
           projects.map((item, index) => (
             <Project item={item} index={index}/>
           ))
         }
-      </div>
+      </GridItem>
   );
 }
 

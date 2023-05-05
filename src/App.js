@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import {
   ChakraProvider,
   theme,
-  Box,
+  Grid
 } from '@chakra-ui/react';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -34,24 +34,18 @@ function App() {
 
   return (
     <ChakraProvider theme={theme}>
-      <Box
+      <Grid
+        minH='100vh'
         w="100%"
-        display="flex"
-        flexDirection="column"
         bgGradient='linear(to-bl, yellow.50 0%, red.100 100%)'
         px={5}
+        templateColumns='repeat(20, 1fr)'
+        templateRows='repeat(19, 1fr) 25px'
       >
-        <Box 
-          w='100%'
-          h='100%'
-          display="flex"
-          flexDirection={{base: "column", lg: "row"}}
-        >
-          <Header currentPage={currentPage} handlePageChange={handlePageChange} />
-          {renderPage()}
-        </Box>
+        <Header currentPage={currentPage} handlePageChange={handlePageChange} />
+        {renderPage()}
         <Footer />
-      </Box>
+      </Grid>
     </ChakraProvider>
   );
 }

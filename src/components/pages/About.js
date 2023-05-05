@@ -1,5 +1,6 @@
 import React from 'react';
 import pic from "../../assets/profile-pic.png";
+import { GridItem, Box, Text } from "@chakra-ui/react"
 
 // returns about section with picture and short bio
 function About() {

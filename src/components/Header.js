@@ -1,12 +1,15 @@
 import React from 'react';
 import Navigation from './Navigation';
-import { Box } from "@chakra-ui/react"
+import { GridItem, Box } from "@chakra-ui/react"
 
 // renders code for header, including the navigation element
 function Header({ currentPage, handlePageChange }) {
   return (
-    <Box
-      w={{base: "100%", lg: "15%"}}
+    <GridItem
+      colStart={1}
+      colEnd={3}
+      rowStart={1}
+      rowEnd={20}
     >
       <Box 
         as="p"
@@ -21,7 +24,7 @@ function Header({ currentPage, handlePageChange }) {
       >DK
       </Box>
       <Navigation currentPage={currentPage} handlePageChange={handlePageChange} />
-    </Box>
+    </GridItem>
   );
 }
 
