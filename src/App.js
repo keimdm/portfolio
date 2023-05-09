@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import {
   ChakraProvider,
-  theme,
   Grid
 } from '@chakra-ui/react';
 import Header from './components/Header';
@@ -10,6 +9,8 @@ import About from './components/pages/About';
 import Portfolio from './components/pages/Portfolio';
 import Home from './components/pages/Home';
 import Contact from './components/pages/Contact';
+import theme from './theme';
+import './theme/styles.css'
 
 function App() {
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { GridItem, Box, Text } from "@chakra-ui/react"
+import { GridItem, Box, Text, Heading } from "@chakra-ui/react"
 
 // renders  code for resume section, including list of skills  and downloadable resume
 function Home({ currentPage, handlePageChange }) {
@@ -20,21 +20,20 @@ function Home({ currentPage, handlePageChange }) {
         justifyContent="center"
         alignItems="baseline"
       >
-        <Text
-          fontFamily="serif"
+        <Heading
           fontSize="7xl"
           color="gray.500"
+          fontWeight="300"
         >
           Hello, I'm&nbsp;&nbsp;
-        </Text>
-        <Text
-            fontFamily="serif"
+        </Heading>
+        <Heading
             fontSize="9xl"
             color="blue.700"
-            fontWeight="bold"
+            fontWeight="700"
           >
             David.
-        </Text>
+        </Heading>
       </Box>
       <Text
         color="gray.500"
