@@ -2,7 +2,7 @@ import React from 'react';
 import { GridItem, Box, Text } from "@chakra-ui/react"
 
 // renders  code for resume section, including list of skills  and downloadable resume
-function Home() {
+function Home({ currentPage, handlePageChange }) {
   return (
     <GridItem
       colStart={3}
@@ -38,6 +38,9 @@ function Home() {
       <Text
         color="gray.500"
         mb={3}
+        as="a"
+        href="#portfolio"
+        onClick={() => handlePageChange('portfolio')}
       >
         View Projects
       </Text>

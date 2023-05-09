@@ -24,7 +24,7 @@ function App() {
       return <Portfolio />;
     }
     if (currentPage === 'home') {
-      return <Home />;
+      return <Home currentPage={currentPage} handlePageChange={handlePageChange}/>;
     }
     return <Contact />;
   };
