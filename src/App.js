@@ -39,6 +39,7 @@ function App() {
         w="100%"
         bgGradient='linear(to-bl, yellow.50 0%, red.100 100%)'
         px={5}
+        py={2}
         templateColumns='repeat(20, 1fr)'
         templateRows='repeat(19, 1fr) 25px'
       >

@@ -6,7 +6,7 @@ import music from '../../assets/music-sequencer.png';
 import tableTennis from '../../assets/table-tennis-pic.jpg';
 import ticTacToe from '../../assets/tic-tac-toe-pic.jpg';
 import Project from './Project';
-import { GridItem } from "@chakra-ui/react"
+import { GridItem, Box, Text } from "@chakra-ui/react"
 
 // returns  portfolio section with project cards
 function Portfolio() {
@@ -69,12 +69,28 @@ function Portfolio() {
         alignItems="center"
         justifyContent="center"
       >
-        <h3>Portfolio</h3>
-        {
-          projects.map((item, index) => (
-            <Project item={item} index={index}/>
-          ))
-        }
+        <Box
+          display="flex"
+          flexDirection="row"
+          alignItems="center"
+          justifyContent="center"
+          flexWrap="wrap"
+        >
+          <Text
+            w="352px"
+            fontFamily="serif"
+            fontSize="5xl"
+            color="gray.500"
+            textAlign="center"
+          >
+            Portfolio
+          </Text>
+          {
+            projects.map((item, index) => (
+              <Project item={item} index={index}/>
+            ))
+          }
+        </Box>
       </GridItem>
   );
 }
