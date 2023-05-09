@@ -44,6 +44,8 @@ function Home() {
       <Text
         color="gray.500"
         mb={3}
+        as="a"
+        href="https://drive.google.com/file/d/1vI5HW-Z7eMg4IGimtN41F95RE3Zdgmit/view?usp=sharing"
       >
         Download Resume
       </Text>
