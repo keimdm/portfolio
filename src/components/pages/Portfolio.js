@@ -68,6 +68,7 @@ function Portfolio() {
         flexDirection="column"
         alignItems="center"
         justifyContent="center"
+        zIndex="2"
       >
         <Box
           display="flex"

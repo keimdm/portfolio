@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   ChakraProvider,
-  Grid
+  Grid,
+  Image
 } from '@chakra-ui/react';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -11,10 +12,21 @@ import Home from './components/pages/Home';
 import Contact from './components/pages/Contact';
 import theme from './theme';
 import './theme/styles.css'
+import cloud from './assets/cloud-pic-big.png';
 
 function App() {
 
+  const [right, setRight] = useState(200);
   const [currentPage, setCurrentPage] = useState('home');
+
+  useEffect(() => {
+      const interval = setInterval(() => {
+          setRight(right + 2);
+      }, 100);
+
+      //Clearing the interval
+      return () => clearInterval(interval);
+  }, [right]);
 
   // deteremines which page to show
   const renderPage = () => {
@@ -44,6 +56,13 @@ function App() {
         templateColumns='repeat(20, 1fr)'
         templateRows='repeat(19, 1fr) 25px'
       >
+        <Image
+        src={cloud}
+        alt="cloud sprite"
+        position="fixed"
+        right={right}
+        >
+        </Image>
         <Header currentPage={currentPage} handlePageChange={handlePageChange} />
         {renderPage()}
         <Footer />

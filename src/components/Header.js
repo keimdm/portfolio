@@ -10,6 +10,7 @@ function Header({ currentPage, handlePageChange }) {
       colEnd={3}
       rowStart={1}
       rowEnd={20}
+      zIndex="2"
     >
       <Heading
         as="p"

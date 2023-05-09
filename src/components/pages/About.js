@@ -14,6 +14,7 @@ function About() {
         flexDirection="column"
         alignItems="center"
         justifyContent="center"
+        zIndex="2"
       >
         <h3>About</h3>
         <img className="w-50" src={pic} alt="Profile"></img>

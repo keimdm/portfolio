@@ -74,6 +74,7 @@ function Contact() {
       flexDirection="column"
       alignItems="center"
       justifyContent="center"
+      zIndex="2"
     >
       <h3>Contact</h3>
       <form className="form d-flex flex-column justify-content-center align-items-center">
