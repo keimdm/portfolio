@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Image } from "@chakra-ui/react"
+import { Image, Text } from "@chakra-ui/react"
 import cloud from '../assets/cloud-pic-normal.png';
 import cloud2 from '../assets/cloud-pic-dark.png';
 
@@ -7,15 +7,18 @@ import cloud2 from '../assets/cloud-pic-dark.png';
 function Cloud({cloudEntry, index, leftValue}) {
 
     const [picture, setPicture] = useState(cloud);
+    const [cursor, setCursor] = useState("auto");
 
     const handleEnter = () => {
         console.log("entered")
         setPicture(cloud2);
+        setCursor("pointer");
     };
 
     const handleLeave = () => {
         console.log("left")
         setPicture(cloud);
+        setCursor("auto");
     };
 
     const handleClick = () => {
@@ -33,6 +36,7 @@ function Cloud({cloudEntry, index, leftValue}) {
             onMouseEnter={() => handleEnter()}
             onMouseLeave={() => handleLeave()}
             onClick={() => handleClick()}
+            cursor={cursor}
         >
         </Image>
     );
