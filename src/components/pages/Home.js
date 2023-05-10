@@ -14,7 +14,6 @@ function Home({ currentPage, handlePageChange }) {
       flexDirection="column"
       alignItems="end"
       justifyContent="end"
-      zIndex="2"
     >
       <Box
         display="flex"
@@ -26,6 +25,7 @@ function Home({ currentPage, handlePageChange }) {
           fontSize="7xl"
           color="gray.500"
           fontWeight="300"
+          zIndex="2"
         >
           Hello, I'm&nbsp;&nbsp;
         </Heading>
@@ -33,6 +33,7 @@ function Home({ currentPage, handlePageChange }) {
             fontSize="9xl"
             color="blue.700"
             fontWeight="700"
+            zIndex="2"
           >
             David.
         </Heading>
@@ -44,6 +45,7 @@ function Home({ currentPage, handlePageChange }) {
         href="#portfolio"
         fontSize="2xl"
         onClick={() => handlePageChange('portfolio')}
+        zIndex="2"
       >
         View Projects
       </Text>
@@ -53,6 +55,7 @@ function Home({ currentPage, handlePageChange }) {
         as="a"
         fontSize="2xl"
         href="https://drive.google.com/file/d/1vI5HW-Z7eMg4IGimtN41F95RE3Zdgmit/view?usp=sharing"
+        zIndex="2"
       >
         Download Resume
       </Text>

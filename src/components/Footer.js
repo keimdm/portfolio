@@ -12,7 +12,6 @@ function Footer() {
       display='flex'
       flexDirection='row'
       justifyContent='center'
-      zIndex="2"
     >
       <Box 
         as="p"
@@ -20,6 +19,7 @@ function Footer() {
         flexDirection="row"
         justifyContent="center"
         color="gray.500"
+        zIndex="2"
       >Made by David Keim, 2023
       </Box>
     </GridItem>

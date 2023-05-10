@@ -68,7 +68,6 @@ function Portfolio() {
         flexDirection="column"
         alignItems="center"
         justifyContent="center"
-        zIndex="2"
       >
         <Box
           display="flex"
@@ -83,6 +82,7 @@ function Portfolio() {
             fontSize="5xl"
             color="gray.500"
             textAlign="center"
+            zIndex="2"
           >
             Portfolio
           </Text>

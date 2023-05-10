@@ -16,6 +16,7 @@ function Project({item, index}) {
       mr={3}
       px={5}
       py={5}
+      zIndex="2"
       >
       <p>{item.title}</p>
       <a href={item.github}>GitHub Link</a>
