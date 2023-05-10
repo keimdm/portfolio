@@ -12,6 +12,7 @@ function Footer() {
       display='flex'
       flexDirection='row'
       justifyContent='center'
+      zIndex="2"
     >
       <Box 
         as="p"
