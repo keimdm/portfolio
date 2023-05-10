@@ -10,17 +10,17 @@ function Header({ currentPage, handlePageChange }) {
       colEnd={3}
       rowStart={1}
       rowEnd={20}
-      zIndex="2"
     >
       <Heading
         as="p"
         display="flex"
         flexDirection="row"
         justifyContent="start"
-        fontSize="3xl"
+        fontSize="4xl"
         fontWeight="700"
         color="blue.700"
-        mb={6}
+        pb={6}
+        zIndex="2"
       >DK
       </Heading>
       <Navigation currentPage={currentPage} handlePageChange={handlePageChange} />

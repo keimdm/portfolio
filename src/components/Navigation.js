@@ -15,7 +15,12 @@ function Navigation({ currentPage, handlePageChange }) {
                 onClick={() => handlePageChange('home')}
                 color={currentPage === 'home' ? 'blue.700' : 'gray.500'}
                 fontWeight={currentPage === 'home' ? 'bold' : 'normal'}
-                mb={3}
+                pb={3}
+                fontSize="2xl"
+                zIndex="2"
+                _hover={{
+                    color: "blue.700"
+                }}
             >Home
             </Box>
             <Box
@@ -24,7 +29,12 @@ function Navigation({ currentPage, handlePageChange }) {
                 onClick={() => handlePageChange('about-me')}
                 color={currentPage === 'about-me' ? 'blue.700' : 'gray.500'}
                 fontWeight={currentPage === 'about-me' ? 'bold' : 'normal'}
-                mb={3}
+                pb={3}
+                fontSize="2xl"
+                zIndex="2"
+                _hover={{
+                    color: "blue.700"
+                }}
             >About Me
             </Box>
             <Box
@@ -33,7 +43,12 @@ function Navigation({ currentPage, handlePageChange }) {
                 onClick={() => handlePageChange('portfolio')}
                 color={currentPage === 'portfolio' ? 'blue.700' : 'gray.500'}
                 fontWeight={currentPage === 'portfolio' ? 'bold' : 'normal'}
-                mb={3}
+                pb={3}
+                fontSize="2xl"
+                zIndex="2"
+                _hover={{
+                    color: "blue.700"
+                }}
             >Portfolio
             </Box>
             <Box
@@ -42,7 +57,12 @@ function Navigation({ currentPage, handlePageChange }) {
                 onClick={() => handlePageChange('contact')}
                 color={currentPage === 'contact' ? 'blue.700' : 'gray.500'}
                 fontWeight={currentPage === 'contact' ? 'bold' : 'normal'}
-                mb={3}
+                fontSize="2xl"
+                zIndex="2"
+                pb={3}
+                _hover={{
+                    color: "blue.700"
+                }}
             >Contact
             </Box>
         </Box>

@@ -40,12 +40,15 @@ function Home({ currentPage, handlePageChange }) {
       </Box>
       <Text
         color="gray.500"
-        mb={3}
+        pb={3}
         as="a"
         href="#portfolio"
         fontSize="2xl"
         onClick={() => handlePageChange('portfolio')}
         zIndex="2"
+        _hover={{
+          color: "blue.700"
+        }}
       >
         View Projects
       </Text>
@@ -56,6 +59,9 @@ function Home({ currentPage, handlePageChange }) {
         fontSize="2xl"
         href="https://drive.google.com/file/d/1vI5HW-Z7eMg4IGimtN41F95RE3Zdgmit/view?usp=sharing"
         zIndex="2"
+        _hover={{
+          color: "blue.700"
+        }}
       >
         Download Resume
       </Text>
