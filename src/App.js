@@ -12,7 +12,6 @@ import Home from './components/pages/Home';
 import Contact from './components/pages/Contact';
 import theme from './theme';
 import './theme/styles.css'
-import cloud from './assets/cloud-pic-big-cropped.png';
 
 function App() {
 
@@ -20,12 +19,12 @@ function App() {
   const [currentPage, setCurrentPage] = useState('home');
   const clouds = [
     {
-      picture: cloud,
-      top: 50
+      top: 50,
+      link: "https://keimdm.github.io/tic-tac-toe/"
     },
     {
-      picture: cloud,
-      top: window.innerHeight - 450
+      top: window.innerHeight - 450,
+      link: "https://keimdm.github.io/table-tennis/"
     },
   ];
 
