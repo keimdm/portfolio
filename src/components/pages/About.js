@@ -39,6 +39,7 @@ function About() {
             px={5}
             py={5}
             maxWidth="50%"
+            boxShadow="base"
           >
             <Image
               borderRadius='10px'

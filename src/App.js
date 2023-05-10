@@ -75,7 +75,7 @@ function App() {
       >
         {
           clouds.map((cloudEntry, index) => (
-            <Cloud cloudEntry={cloudEntry} index={index} leftValue={lefts[index]}/>
+            <Cloud cloudEntry={cloudEntry} index={index} leftValue={lefts[index]} currentPage={currentPage}/>
           ))
         }
         <Header currentPage={currentPage} handlePageChange={handlePageChange} />

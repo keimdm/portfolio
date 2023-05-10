@@ -47,54 +47,6 @@ function Home({ currentPage, handlePageChange }) {
       >
         Full Stack Web Developer, Python, Web Design
       </Text>
-      {/*
-      <Box
-        display="flex"
-        flexDirection="row"
-      >
-        <Box
-          mb={12}
-          px={6}
-          ml={6}
-          as="a"
-          href="#portfolio"
-          fontSize="2xl"
-          onClick={() => handlePageChange('portfolio')}
-          zIndex="2"
-          borderColor="gray.500"
-          borderWidth="2px"
-          color="gray.500"
-          borderRadius="10px"
-          _hover={{
-            backgroundColor: "blue.700",
-            borderColor: "blue.700",
-            color: "white"
-          }}
-        >
-          View Projects
-        </Box>
-        <Box
-          mb={12}
-          px={6}
-          ml={6}
-          as="a"
-          fontSize="2xl"
-          href="https://drive.google.com/file/d/1vI5HW-Z7eMg4IGimtN41F95RE3Zdgmit/view?usp=sharing"
-          zIndex="2"
-          borderColor="gray.500"
-          borderWidth="2px"
-          color="gray.500"
-          borderRadius="10px"
-          _hover={{
-            backgroundColor: "blue.700",
-            borderColor: "blue.700",
-            color: "white"
-          }}
-        >
-          View Resume
-        </Box>
-      </Box>
-        */}
     </GridItem>
   );
 }
