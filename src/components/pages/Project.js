@@ -12,8 +12,8 @@ function Project({item, index}) {
       alignItems="center"
       borderRadius="10px"
       boxShadow="base"
-      mb={3}
-      mr={3}
+      maxWidth="45%"
+      mb={9}
       px={5}
       py={5}
       zIndex="2"
@@ -23,8 +23,6 @@ function Project({item, index}) {
       <a href={item.deployed}>Deployed Application Link</a>
       <Image
         borderRadius='10px'
-        h="180px"
-        w="300px"
         objectFit='cover'
         src={item.image}
         alt={item.title}>

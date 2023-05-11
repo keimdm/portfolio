@@ -13,19 +13,19 @@ function About() {
         display="flex"
         flexDirection="column"
         alignItems="center"
-        justifyContent="center"
+        justifyContent="start"
         zIndex="2"
         pl={24}
       >
         <Heading
           fontSize="7xl"
-          w="352px"
           fontWeight="700"
           color="blue.700"
           textAlign="center"
           zIndex="2"
           alignSelf="start"
-
+          mb={3}
+          mt={14}
         >
           About Me
         </Heading>
@@ -61,7 +61,7 @@ function About() {
               fontSize="2xl"
               zIndex="2"
             >
-              Full stack web developer with background in chemical engineering and management consulting.<br></br><br></br>Interested in designing games, music, and good food.
+              Full stack web developer based in NYC with background in chemical engineering and management consulting.<br></br><br></br>Interested in designing games, music, and good food.
             </Text>
             <Box
               px={6}

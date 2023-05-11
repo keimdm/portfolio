@@ -32,7 +32,7 @@ function Cloud({cloudEntry, index, leftValue, currentPage}) {
         <Image
             src={picture}
             alt="cloud sprite"
-            position="absolute"
+            position="fixed"
             left={leftValue.toString() + "px"}
             top={cloudEntry.top.toString() + "px"}
             onMouseEnter={() => handleEnter()}
