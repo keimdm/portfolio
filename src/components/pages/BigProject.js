@@ -11,7 +11,7 @@ function BigProject({item, index}) {
     >
       <Box
         borderRadius='10px'
-        backgroundColor="red.500"
+        backgroundColor="white"
         px={5}
         py={5}
         maxWidth="50%"
