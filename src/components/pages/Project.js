@@ -1,33 +1,84 @@
 import React from 'react';
-import { Box, Image } from '@chakra-ui/react';
+import { Box, Image, Heading } from '@chakra-ui/react';
 
 // renders code to generate cards in portfolio section
 function Project({item, index}) {
   return (
     <Box
-      bgColor="white"
       display="flex"
       flexDirection="column"
-      justifyContent="center"
-      alignItems="center"
-      borderRadius="10px"
-      boxShadow="base"
-      maxWidth="45%"
-      mb={9}
-      px={5}
-      py={5}
-      zIndex="2"
+      maxWidth="48%"
+    >
+      <Heading
+        fontSize="5xl"
+        color="gray.500"
+        fontWeight="300"
       >
-      <p>{item.title}</p>
-      <a href={item.github}>GitHub Link</a>
-      <a href={item.deployed}>Deployed Application Link</a>
-      <Image
+        {item.title}
+      </Heading>
+      <Box
         borderRadius='10px'
-        objectFit='cover'
-        src={item.image}
-        alt={item.title}>
-      </Image>
+        backgroundColor="white"
+        px={5}
+        py={5}
+        mb={6}
+        boxShadow="base"
+      >
+        <Image
+          borderRadius='10px'
+          src={item.image}
+          alt={item.title}>
+        </Image>
+      </Box>
+      <Box
+        display="flex"
+        flexDirection="row"
+        justifyContent="center"
+      >
+        <Box
+          px={6}
+          mb={6}
+          as="a"
+          fontSize="2xl"
+          href={item.github}
+          zIndex="2"
+          borderColor="gray.500"
+          borderWidth="2px"
+          color="gray.500"
+          borderRadius="10px"
+          alignSelf="center"
+          _hover={{
+            backgroundColor: "blue.700",
+            borderColor: "blue.700",
+            color: "white"
+          }}
+        >
+          View GitHub
+        </Box>
+        <Box
+          px={6}
+          mb={6}
+          ml={5}
+          as="a"
+          fontSize="2xl"
+          href={item.deployed}
+          zIndex="2"
+          borderColor="gray.500"
+          borderWidth="2px"
+          color="gray.500"
+          borderRadius="10px"
+          alignSelf="center"
+          _hover={{
+            backgroundColor: "blue.700",
+            borderColor: "blue.700",
+            color: "white"
+          }}
+        >
+          View App
+        </Box>
+      </Box>
     </Box>
+    
   );
 }
 

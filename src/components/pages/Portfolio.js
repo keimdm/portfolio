@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import cocktail from '../../assets/cocktail-pic-square.jpg';
 import lifelog from '../../assets/lifelog-pic-square.jpg';
 import weather from '../../assets/weather-pic-square.jpg';
-import music from '../../assets/music-sequencer.png';
-import tableTennis from '../../assets/table-tennis-pic.jpg';
-import ticTacToe from '../../assets/tic-tac-toe-pic.jpg';
+import music from '../../assets/music-sequencer-square.jpg';
+import tableTennis from '../../assets/table-tennis-pic-square.jpg';
+import ticTacToe from '../../assets/tic-tac-toe-pic-square.jpg';
 import Project from './Project';
 import BigProject from './BigProject';
 import { GridItem, Box, Heading } from "@chakra-ui/react"
@@ -47,41 +47,20 @@ function Portfolio() {
   const projects = [
     {
       id: 1,
-      title: "Breezy Cocktail",
-      github: "https://github.com/keimdm/recipe-search",
-      deployed: "https://keimdm.github.io/recipe-search/",
-      image: cocktail
-    },
-    {
-      id: 2,
-      title: "LifeLog",
-      github: "https://github.com/emmaparis/Project-2",
-      deployed: "https://lifelog.herokuapp.com/",
-      image: lifelog
-    },
-    {
-      id: 3,
-      title: "Weather App",
-      github: "https://github.com/keimdm/weather-challenge",
-      deployed: "https://keimdm.github.io/weather-challenge/",
-      image: weather
-    },
-    {
-      id: 4,
       title: "Music Sequencer",
       github: "https://github.com/keimdm/music-sequencer",
       deployed: "https://keimdm.github.io/music-sequencer/",
       image: music
     },
     {
-      id: 5,
+      id: 2,
       title: "Table Tennis",
       github: "https://github.com/keimdm/table-tennis",
       deployed: "https://keimdm.github.io/table-tennis/",
       image: tableTennis
     },
     {
-      id: 6,
+      id: 3,
       title: "Tic-Tac-Toe",
       github: "https://github.com/keimdm/tic-tac-toe",
       deployed: "https://keimdm.github.io/tic-tac-toe/",
