@@ -51,7 +51,7 @@ function Navigation({ currentPage, handlePageChange }) {
                 }}
             >Portfolio
             </Box>
-            <Box
+            {/*<Box
                 as="a"
                 href="#contact"
                 onClick={() => handlePageChange('contact')}
@@ -64,7 +64,7 @@ function Navigation({ currentPage, handlePageChange }) {
                     color: "blue.700"
                 }}
             >Contact
-            </Box>
+            </Box>*/}
         </Box>
     );
 }
