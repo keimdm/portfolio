@@ -19,7 +19,7 @@ function App() {
   const [currentPage, setCurrentPage] = useState('home');
   const clouds = [
     {
-      top: 50,
+      top: 10,
       link: "https://keimdm.github.io/tic-tac-toe/"
     },
     {

@@ -117,7 +117,8 @@ function Portfolio() {
           _hover={{
             backgroundColor: "blue.700",
             borderColor: "blue.700",
-            color: "white"
+            color: "white",
+            cursor: "pointer"
           }}
         >
           See More
@@ -166,7 +167,8 @@ function Portfolio() {
             _hover={{
               backgroundColor: "blue.700",
               borderColor: "blue.700",
-              color: "white"
+              color: "white",
+              cursor: "pointer"
             }}
           >
             Hide More

@@ -41,7 +41,7 @@ function Home({ currentPage, handlePageChange }) {
       <Text
         color="gray.500"
         pb={3}
-        mb={24}
+        mb={6}
         fontSize="2xl"
         zIndex="2"
       >

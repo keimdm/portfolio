@@ -53,6 +53,7 @@ function Links() {
                     _hover={{
                         cursor: "pointer"
                     }}
+                    mb={20}
                 >
                     <SiLinkedin />
                 </Box>

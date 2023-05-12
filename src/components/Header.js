@@ -17,7 +17,7 @@ function Header({ currentPage, handlePageChange }) {
         display="flex"
         flexDirection="column"
         justifyContent="space-between"
-        h="90vh"
+        h="100vh"
       >
         <Box>
           <Heading

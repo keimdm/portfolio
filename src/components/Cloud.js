@@ -103,6 +103,7 @@ function Cloud({cloudEntry, index, leftValue, currentPage}) {
             <Image
                 src={picture}
                 alt="cloud sprite"
+                opacity={0.6}
             >
             </Image>
             {
