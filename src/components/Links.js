@@ -11,8 +11,8 @@ function Links({colorMode, colors}) {
     return (
         <Box
             display="flex"
-            flexDirection="column"
-            justifyContent="center"
+            flexDirection="row"
+            justifyContent="start"
             alignItems="start"
             alignSelf="end"
         >
@@ -37,7 +37,7 @@ function Links({colorMode, colors}) {
                     _hover={{
                         cursor: "pointer",
                     }}
-                    mb={20}
+                    pl={3}
                 >
                     <SiLinkedin />
                 </Box>

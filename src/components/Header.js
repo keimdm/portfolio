@@ -1,14 +1,11 @@
 import React from 'react';
 import Navigation from './Navigation';
 import Links from './Links';
+import Controls from './Controls';
 import { GridItem, Heading, Box } from "@chakra-ui/react"
 
 // renders code for header, including the navigation element
 function Header({ currentPage, handlePageChange, setColorMode, colorMode, colors }) {
-
-  const handleToggle = () => {
-    setColorMode(colorMode==="light" ? "dark" : "light")
-  }
 
   return (
     <GridItem
@@ -38,18 +35,19 @@ function Header({ currentPage, handlePageChange, setColorMode, colorMode, colors
           >DK
           </Heading>
           <Navigation currentPage={currentPage} handlePageChange={handlePageChange} colorMode={colorMode} colors={colors} />
+          <Box
+            zIndex="2"
+            pt={2}
+          >
+            <Links colorMode={colorMode} colors={colors} />
         </Box>
+        </Box>
+        
         <Box
           zIndex="2"  
           pl={3}
         >
-          <Links colorMode={colorMode} colors={colors} />
-          <Box
-            bgColor="red.500"
-            onClick={() => handleToggle()}
-          >
-            Click to Toggle
-          </Box>
+          <Controls colorMode={colorMode} colors={colors} setColorMode={setColorMode} />
         </Box>
       </Box>
     </GridItem>
