@@ -10,6 +10,7 @@ function Controls({colorMode, colors, setColorMode}) {
     const [playing, setPlaying] = useState(false);
 
     const handleToggle = () => {
+        window.localStorage.setItem("dkPortfolioColorMode", colorMode);
         setColorMode(colorMode==="light" ? "dark" : "light")
         if (window.localStorage.getItem("dkPortfolioColorMode") === "light") {
             window.localStorage.setItem("dkPortfolioColorMode", "dark");
