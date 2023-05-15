@@ -17,6 +17,7 @@ function App() {
 
   const [lefts, setLefts] = useState([window.innerWidth, window.innerWidth - (window.innerWidth + 800)/2]);
   const [currentPage, setCurrentPage] = useState('home');
+  const [colorMode, setColorMode] = useState(window.localStorage.getItem("dkPortfolioColorMode") || "light");
   const clouds = [
     {
       top: 10,
@@ -27,6 +28,20 @@ function App() {
       link: "https://keimdm.github.io/table-tennis/"
     },
   ];
+  const colors = {
+    standardLight: "gray.500",
+    standardDark: "gray.300",
+    accentLight: "blue.700",
+    accentDark: "blue.400",
+    gradientLight: 'linear(to-bl, yellow.50 0%, red.100 100%)',
+    gradientDark: 'linear(to-bl, blue.900 0%, purple.800 100%)',
+    linkStandardLight: "#718096",
+    linkStandardDark: "#CBD5E0",
+    linkActiveLight: "#2C5282",
+    linkActiveDark: "#4299E1",
+    backgroundLight: "white",
+    backgroundDark: "gray.700"
+  }
 
   useEffect(() => {
       const interval = setInterval(() => {
@@ -48,13 +63,13 @@ function App() {
   // deteremines which page to show
   const renderPage = () => {
     if (currentPage === 'about-me') {
-      return <About />;
+      return <About colorMode={colorMode} colors={colors}/>;
     }
     if (currentPage === 'portfolio') {
-      return <Portfolio />;
+      return <Portfolio colorMode={colorMode} colors={colors}/>;
     }
     if (currentPage === 'home') {
-      return <Home currentPage={currentPage} handlePageChange={handlePageChange}/>;
+      return <Home currentPage={currentPage} handlePageChange={handlePageChange} colorMode={colorMode} colors={colors}/>;
     }
     return <Contact />;
   };
@@ -67,7 +82,7 @@ function App() {
       <Grid
         minH='100vh'
         w="100%"
-        bgGradient='linear(to-bl, yellow.50 0%, red.100 100%)'
+        bgGradient={colorMode === "light" ? colors.gradientLight : colors.gradientDark}
         px={5}
         py={2}
         templateColumns='repeat(20, 1fr)'
@@ -75,12 +90,12 @@ function App() {
       >
         {
           clouds.map((cloudEntry, index) => (
-            <CloudAlt cloudEntry={cloudEntry} index={index} leftValue={lefts[index]} currentPage={currentPage}/>
+            <CloudAlt cloudEntry={cloudEntry} index={index} leftValue={lefts[index]} currentPage={currentPage} colorMode={colorMode} colors={colors}/>
           ))
         }
-        <Header currentPage={currentPage} handlePageChange={handlePageChange} />
+        <Header currentPage={currentPage} handlePageChange={handlePageChange} colorMode={colorMode} setColorMode={setColorMode} colors={colors} />
         {renderPage()}
-        <Footer />
+        <Footer colorMode={colorMode} colors={colors} />
       </Grid>
     </ChakraProvider>
   );

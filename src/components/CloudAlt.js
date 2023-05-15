@@ -4,9 +4,9 @@ import cloud from '../assets/cloud-pic-normal.png';
 import CloudBox from './CloudBox';
 
 // renders code for header, including the navigation element
-function CloudAlt({cloudEntry, index, leftValue, currentPage}) {
+function CloudAlt({cloudEntry, index, leftValue, currentPage, colorMode, colors}) {
 
-    const [opacity, setOpacity] = useState(0.6);
+    const [cloudHover, setCloudHover] = useState(false);
     const [cursor, setCursor] = useState("auto");
 
     const boxData = [
@@ -75,14 +75,14 @@ function CloudAlt({cloudEntry, index, leftValue, currentPage}) {
     const handleEnter = () => {
         console.log("entered")
         if (currentPage === "home") {
-            setOpacity(1);
+            setCloudHover(true);
             setCursor("pointer");
         }
     };
 
     const handleLeave = () => {
         console.log("left")
-        setOpacity(0.6);
+        setCloudHover(false);
         setCursor("auto");
     };
 
@@ -102,7 +102,7 @@ function CloudAlt({cloudEntry, index, leftValue, currentPage}) {
             <Image
                 src={cloud}
                 alt="cloud sprite"
-                opacity={opacity}
+                opacity={cloudHover === true ? (colorMode === "light" ? 1 : 0.3) : (colorMode === "light" ? 0.6 : 0.1)}
             >
             </Image>
             {

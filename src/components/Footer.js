@@ -2,7 +2,7 @@ import React from 'react';
 import { GridItem, Box } from "@chakra-ui/react"
 
 // renders code for footer
-function Footer() {
+function Footer({colorMode, colors}) {
   return (
     <GridItem
       colStart={3}
@@ -13,7 +13,7 @@ function Footer() {
       flexDirection='row'
       justifyContent='center'
       zIndex="2"
-      color="gray.500"
+      color={colorMode === "light" ? colors.standardLight : colors.standardDark}
       opacity={0}
       _hover={{
           opacity: 100

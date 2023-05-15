@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Image, Heading } from '@chakra-ui/react';
 
 // renders code to generate cards in portfolio section
-function Project({item, index}) {
+function Project({item, index, colorMode, colors}) {
   return (
     <Box
       display="flex"
@@ -11,14 +11,14 @@ function Project({item, index}) {
     >
       <Heading
         fontSize="5xl"
-        color="gray.500"
+        color={colorMode === "light" ? colors.standardLight : colors.standardDark}
         fontWeight="300"
       >
         {item.title}
       </Heading>
       <Box
         borderRadius='10px'
-        backgroundColor="white"
+        backgroundColor={colorMode === "light" ? colors.backgroundLight : colors.backgroundDark}
         px={5}
         py={5}
         mb={6}
@@ -42,15 +42,16 @@ function Project({item, index}) {
           fontSize="2xl"
           href={item.github}
           zIndex="2"
-          borderColor="gray.500"
+          borderColor={colorMode === "light" ? colors.standardLight : colors.standardDark}
           borderWidth="2px"
-          color="gray.500"
+          color={colorMode === "light" ? colors.standardLight : colors.standardDark}
           borderRadius="10px"
           alignSelf="center"
           _hover={{
-            backgroundColor: "blue.700",
-            borderColor: "blue.700",
-            color: "white"
+            backgroundColor: colorMode === "light" ? colors.accentLight : colors.accentDark,
+            borderColor: colorMode === "light" ? colors.accentLight : colors.accentDark,
+            color: colorMode === "light" ? colors.backgroundLight : colors.backgroundDark,
+            cursor: "pointer"
           }}
         >
           View GitHub
@@ -63,15 +64,16 @@ function Project({item, index}) {
           fontSize="2xl"
           href={item.deployed}
           zIndex="2"
-          borderColor="gray.500"
+          borderColor={colorMode === "light" ? colors.standardLight : colors.standardDark}
           borderWidth="2px"
-          color="gray.500"
+          color={colorMode === "light" ? colors.standardLight : colors.standardDark}
           borderRadius="10px"
           alignSelf="center"
           _hover={{
-            backgroundColor: "blue.700",
-            borderColor: "blue.700",
-            color: "white"
+            backgroundColor: colorMode === "light" ? colors.accentLight : colors.accentDark,
+            borderColor: colorMode === "light" ? colors.accentLight : colors.accentDark,
+            color: colorMode === "light" ? colors.backgroundLight : colors.backgroundDark,
+            cursor: "pointer"
           }}
         >
           View App

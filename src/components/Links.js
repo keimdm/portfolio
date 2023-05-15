@@ -3,26 +3,10 @@ import { Box } from "@chakra-ui/react"
 import { SiGithub, SiLinkedin } from 'react-icons/si';
 import { IconContext } from "react-icons";
 
-function Links() {
+function Links({colorMode, colors}) {
 
-    const [ghColor, setGhColor] = useState("#718096");
-    const [liColor, setLiColor] = useState("#718096");
-
-    const handleGhEnter = () => {
-        setGhColor("#2C5282");
-    };
-
-    const handleGhLeave = () => {
-        setGhColor("#718096");
-    };
-
-    const handleLiEnter = () => {
-        setLiColor("#2C5282");
-    };
-
-    const handleLiLeave = () => {
-        setLiColor("#718096");
-    };
+    const [ghHover, setGhHover] = useState(false);
+    const [liHover, setLiHover] = useState(false);
 
     return (
         <Box
@@ -32,26 +16,26 @@ function Links() {
             alignItems="start"
             alignSelf="end"
         >
-            <IconContext.Provider value={{ color: ghColor, size: "2em" }}>
+            <IconContext.Provider value={{ color: colorMode === "light" ? (ghHover === true ? colors.linkActiveLight : colors.linkStandardLight) : (ghHover === true ? colors.linkActiveDark : colors.linkStandardDark), size: "2em" }}>
                 <Box
                     pb={3}
-                    onMouseEnter={() => handleGhEnter()}
-                    onMouseLeave={() => handleGhLeave()}
                     onClick={() => window.open("https://github.com/keimdm", '_blank')}
+                    onMouseEnter={() => setGhHover(true)}
+                    onMouseLeave={() => setGhHover(false)}
                     _hover={{
-                        cursor: "pointer"
+                        cursor: "pointer",
                     }}
                 >
                     <SiGithub />
                 </Box>
             </IconContext.Provider>
-            <IconContext.Provider value={{ color: liColor, size: "2em" }}>
+            <IconContext.Provider value={{ color: colorMode === "light" ? (liHover === true ? colors.linkActiveLight : colors.linkStandardLight) : (liHover === true ? colors.linkActiveDark : colors.linkStandardDark), size: "2em" }}>
                 <Box
-                    onMouseEnter={() => handleLiEnter()}
-                    onMouseLeave={() => handleLiLeave()}
                     onClick={() => window.open("https://www.linkedin.com/in/keimdavid/", '_blank')}
+                    onMouseEnter={() => setLiHover(true)}
+                    onMouseLeave={() => setLiHover(false)}
                     _hover={{
-                        cursor: "pointer"
+                        cursor: "pointer",
                     }}
                     mb={20}
                 >

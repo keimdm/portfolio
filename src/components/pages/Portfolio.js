@@ -10,7 +10,7 @@ import BigProject from './BigProject';
 import { GridItem, Box, Heading } from "@chakra-ui/react"
 
 // returns  portfolio section with project cards
-function Portfolio() {
+function Portfolio({colorMode, colors}) {
 
   // data about projects
 
@@ -87,7 +87,7 @@ function Portfolio() {
         <Heading
           fontSize="7xl"
           fontWeight="700"
-          color="blue.700"
+          color={colorMode === "light" ? colors.accentLight : colors.accentDark}
           textAlign="center"
           zIndex="2"
           alignSelf="start"
@@ -98,7 +98,7 @@ function Portfolio() {
         </Heading>
         {
           bigProjects.map((item, index) => (
-            <BigProject item={item} index={index}/>
+            <BigProject item={item} index={index} colorMode={colorMode} colors={colors}/>
           ))
         }
         <Box
@@ -108,16 +108,16 @@ function Portfolio() {
           display={moreVisible ? "none" : "block"}
           fontSize="2xl"
           zIndex="2"
-          borderColor="gray.500"
+          borderColor={colorMode === "light" ? colors.standardLight : colors.standardDark}
           borderWidth="2px"
-          color="gray.500"
+          color={colorMode === "light" ? colors.standardLight : colors.standardDark}
           borderRadius="10px"
           alignSelf="center"
           onClick={() => setMoreVisible(true)}
           _hover={{
-            backgroundColor: "blue.700",
-            borderColor: "blue.700",
-            color: "white",
+            backgroundColor: colorMode === "light" ? colors.accentLight : colors.accentDark,
+            borderColor: colorMode === "light" ? colors.accentLight : colors.accentDark,
+            color: colorMode === "light" ? colors.backgroundLight : colors.backgroundDark,
             cursor: "pointer"
           }}
         >
@@ -130,7 +130,7 @@ function Portfolio() {
           <Heading
             fontSize="7xl"
             fontWeight="700"
-            color="blue.700"
+            color={colorMode === "light" ? colors.accentLight : colors.accentDark}
             textAlign="center"
             zIndex="2"
             alignSelf="start"
@@ -148,7 +148,7 @@ function Portfolio() {
           >
             {
               projects.map((item, index) => (
-                <Project item={item} index={index}/>
+                <Project item={item} index={index} colorMode={colorMode} colors={colors}/>
               ))
             }
           </Box>
@@ -158,16 +158,16 @@ function Portfolio() {
             mt={9}
             fontSize="2xl"
             zIndex="2"
-            borderColor="gray.500"
+            borderColor={colorMode === "light" ? colors.standardLight : colors.standardDark}
             borderWidth="2px"
-            color="gray.500"
+            color={colorMode === "light" ? colors.standardLight : colors.standardDark}
             borderRadius="10px"
             alignSelf="center"
             onClick={() => setMoreVisible(false)}
             _hover={{
-              backgroundColor: "blue.700",
-              borderColor: "blue.700",
-              color: "white",
+              backgroundColor: colorMode === "light" ? colors.accentLight : colors.accentDark,
+              borderColor: colorMode === "light" ? colors.accentLight : colors.accentDark,
+              color: colorMode === "light" ? colors.backgroundLight : colors.backgroundDark,
               cursor: "pointer"
             }}
           >

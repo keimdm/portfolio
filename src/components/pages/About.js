@@ -3,7 +3,7 @@ import pic from "../../assets/new-profile-pic.png";
 import { GridItem, Heading, Image, Text, Box } from "@chakra-ui/react"
 
 // returns about section with picture and short bio
-function About() {
+function About({colorMode, colors}) {
   return (
       <GridItem
         colStart={3}
@@ -20,7 +20,7 @@ function About() {
         <Heading
           fontSize="7xl"
           fontWeight="700"
-          color="blue.700"
+          color={colorMode === "light" ? colors.accentLight : colors.accentDark}
           textAlign="center"
           zIndex="2"
           alignSelf="start"
@@ -35,7 +35,7 @@ function About() {
         >
           <Box
             borderRadius='10px'
-            backgroundColor="white"
+            backgroundColor={colorMode === "light" ? colors.backgroundLight : colors.backgroundDark}
             px={5}
             py={5}
             maxWidth="50%"
@@ -56,7 +56,7 @@ function About() {
             py={5}
           >
             <Text
-              color="gray.500"
+              color={colorMode === "light" ? colors.standardLight : colors.standardDark}
               pb={3}
               fontSize="2xl"
               zIndex="2"
@@ -70,15 +70,16 @@ function About() {
               fontSize="2xl"
               href="https://drive.google.com/file/d/1vI5HW-Z7eMg4IGimtN41F95RE3Zdgmit/view?usp=sharing"
               zIndex="2"
-              borderColor="gray.500"
+              borderColor={colorMode === "light" ? colors.standardLight : colors.standardDark}
               borderWidth="2px"
-              color="gray.500"
+              color={colorMode === "light" ? colors.standardLight : colors.standardDark}
               borderRadius="10px"
               alignSelf="center"
               _hover={{
-                backgroundColor: "blue.700",
-                borderColor: "blue.700",
-                color: "white"
+                backgroundColor: colorMode === "light" ? colors.accentLight : colors.accentDark,
+                borderColor: colorMode === "light" ? colors.accentLight : colors.accentDark,
+                color: colorMode === "light" ? colors.backgroundLight : colors.backgroundDark,
+                cursor: "pointer"
               }}
             >
               Download Resume
