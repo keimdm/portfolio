@@ -5,7 +5,7 @@ import {
 } from '@chakra-ui/react';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Cloud from './components/Cloud';
+import CloudAlt from './components/CloudAlt';
 import About from './components/pages/About';
 import Portfolio from './components/pages/Portfolio';
 import Home from './components/pages/Home';
@@ -75,7 +75,7 @@ function App() {
       >
         {
           clouds.map((cloudEntry, index) => (
-            <Cloud cloudEntry={cloudEntry} index={index} leftValue={lefts[index]} currentPage={currentPage}/>
+            <CloudAlt cloudEntry={cloudEntry} index={index} leftValue={lefts[index]} currentPage={currentPage}/>
           ))
         }
         <Header currentPage={currentPage} handlePageChange={handlePageChange} />
