@@ -23,19 +23,21 @@ function Controls({colorMode, colors, setColorMode}) {
     return (
         <Box
             display="flex"
-            flexDirection="column"
+            flexDirection={{base: "row", md: "column"}}
             justifyContent="center"
             alignItems="start"
         >
             <IconContext.Provider value={{ color: colorMode === "light" ? (mode === true ? colors.linkActiveLight : colors.linkStandardLight) : (mode === true ? colors.linkActiveDark : colors.linkStandardDark), size: "2em" }}>
                 <Box
-                    pb={3}
+                    pb={{base: 0, md: 3}}
                     onClick={() => handleToggle()}
                     onMouseEnter={() => setMode(true)}
                     onMouseLeave={() => setMode(false)}
                     _hover={{
                         cursor: "pointer",
                     }}
+                    zIndex={{base: "3", md: "2"}}
+                    mr={{base: 3, md: 0}}
                 >
                     <VscColorMode />
                 </Box>
@@ -49,7 +51,8 @@ function Controls({colorMode, colors, setColorMode}) {
                     _hover={{
                         cursor: "pointer",
                     }}
-                    mb={20}
+                    mb={{base: 0, md: 20}}
+                    zIndex={{base: "3", md: "2"}}
                 >
                     <VscUnmute />
                 </Box>
@@ -61,7 +64,8 @@ function Controls({colorMode, colors, setColorMode}) {
                     _hover={{
                         cursor: "pointer",
                     }}
-                    mb={20}
+                    mb={{base: 0, md: 20}}
+                    zIndex={{base: "3", md: "2"}}
                 >
                     <VscMute />
                 </Box>

@@ -6,7 +6,8 @@ function BigProject({item, index, colorMode, colors}) {
   return (
     <Box
       display="flex"
-      flexDirection={index % 2 === 0 ? "row" : "row-reverse"}
+      flexDirection={{base: "column", md: index % 2 === 0 ? "row" : "row-reverse"}}
+      alignItems={{base: "center", md: "auto"}}
       mb={9}
     >
       <Box
@@ -14,7 +15,7 @@ function BigProject({item, index, colorMode, colors}) {
         backgroundColor={colorMode === "light" ? colors.backgroundLight : colors.backgroundDark}
         px={5}
         py={5}
-        maxWidth="50%"
+        maxWidth={{base: "70%", md: "50%"}}
         boxShadow="base"
       >
         <Image
@@ -26,22 +27,23 @@ function BigProject({item, index, colorMode, colors}) {
       <Box
         display="flex"
         flexDirection="column"
-        maxWidth="50%"
+        maxWidth={{base: "70%", md: "50%"}}
         justifyContent="space-between"
         px={5}
         py={5}
       >
         <Heading
-          fontSize="5xl"
+          fontSize={{base: "4xl", md: "5xl"}}
           color={colorMode === "light" ? colors.standardLight : colors.standardDark}
           fontWeight="300"
+          textAlign={{base: "center", md: "start"}}
         >
           {item.title}
         </Heading>
         <Text
           color={colorMode === "light" ? colors.standardLight : colors.standardDark}
           pb={3}
-          fontSize="2xl"
+          fontSize={{base: "1xl", md: "2xl"}}
           zIndex="2"
         >
           {item.description}<br></br><br></br>{item.skills}
@@ -54,9 +56,9 @@ function BigProject({item, index, colorMode, colors}) {
           <Box
             px={6}
             mb={6}
-            ml={5}
+            ml={{base: 0, md: 5}}
             as="a"
-            fontSize="2xl"
+            fontSize={{base: "1xl", md: "2xl"}}
             href={item.github}
             zIndex="2"
             borderColor={colorMode === "light" ? colors.standardLight : colors.standardDark}
@@ -64,6 +66,7 @@ function BigProject({item, index, colorMode, colors}) {
             color={colorMode === "light" ? colors.standardLight : colors.standardDark}
             borderRadius="10px"
             alignSelf="center"
+            textAlign="center"
             _hover={{
               backgroundColor: colorMode === "light" ? colors.accentLight : colors.accentDark,
               borderColor: colorMode === "light" ? colors.accentLight : colors.accentDark,
@@ -78,7 +81,7 @@ function BigProject({item, index, colorMode, colors}) {
             mb={6}
             ml={5}
             as="a"
-            fontSize="2xl"
+            fontSize={{base: "1xl", md: "2xl"}}
             href={item.deployed}
             zIndex="2"
             borderColor={colorMode === "light" ? colors.standardLight : colors.standardDark}
@@ -86,6 +89,7 @@ function BigProject({item, index, colorMode, colors}) {
             color={colorMode === "light" ? colors.standardLight : colors.standardDark}
             borderRadius="10px"
             alignSelf="center"
+            textAlign="center"
             _hover={{
               backgroundColor: colorMode === "light" ? colors.accentLight : colors.accentDark,
               borderColor: colorMode === "light" ? colors.accentLight : colors.accentDark,

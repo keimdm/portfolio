@@ -1,13 +1,15 @@
 import React from 'react';
-import { Box } from "@chakra-ui/react"
+import { Box, Hide } from "@chakra-ui/react"
+import Controls from './Controls';
 
 // reeturns code  to be renedered for navigation section, creating links that refer to handlePageChange method to change  the page being  vieweed
-function Navigation({ currentPage, handlePageChange, colorMode, colors }) {
+function Navigation({ currentPage, handlePageChange, colorMode, colors, setColorMode }) {
     return (
         <Box
             display="flex"
-            flexDirection={{base: "row", lg: "column"}}
-            justifyContent="space-between"
+            flexDirection={{base: "row", md: "column"}}
+            justifyContent={{base: "space-around", md: "space-between"}}
+            w={{base: "100%", md: "auto"}}
         >
             <Box
                 as="a"
@@ -17,7 +19,7 @@ function Navigation({ currentPage, handlePageChange, colorMode, colors }) {
                 fontWeight={currentPage === 'home' ? 'bold' : 'normal'}
                 pb={3}
                 fontSize="2xl"
-                zIndex="2"
+                zIndex={{base: "3", md: "2"}}
                 _hover={{
                     color: colorMode === "light" ? colors.accentLight : colors.accentDark
                 }}
@@ -31,7 +33,7 @@ function Navigation({ currentPage, handlePageChange, colorMode, colors }) {
                 fontWeight={currentPage === 'about-me' ? 'bold' : 'normal'}
                 pb={3}
                 fontSize="2xl"
-                zIndex="2"
+                zIndex={{base: "3", md: "2"}}
                 _hover={{
                     color: colorMode === "light" ? colors.accentLight : colors.accentDark
                 }}
@@ -45,12 +47,15 @@ function Navigation({ currentPage, handlePageChange, colorMode, colors }) {
                 fontWeight={currentPage === 'portfolio' ? 'bold' : 'normal'}
                 pb={3}
                 fontSize="2xl"
-                zIndex="2"
+                zIndex={{base: "3", md: "2"}}
                 _hover={{
                     color: colorMode === "light" ? colors.accentLight : colors.accentDark
                 }}
             >Portfolio
             </Box>
+            <Hide above='md'>
+                <Controls colorMode={colorMode} colors={colors} setColorMode={setColorMode} />
+            </Hide>
         </Box>
     );
 }

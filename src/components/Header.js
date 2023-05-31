@@ -2,7 +2,7 @@ import React from 'react';
 import Navigation from './Navigation';
 import Links from './Links';
 import Controls from './Controls';
-import { GridItem, Heading, Box } from "@chakra-ui/react"
+import { GridItem, Heading, Box, Show } from "@chakra-ui/react"
 
 // renders code for header, including the navigation element
 function Header({ currentPage, handlePageChange, setColorMode, colorMode, colors }) {
@@ -10,36 +10,43 @@ function Header({ currentPage, handlePageChange, setColorMode, colorMode, colors
   return (
     <GridItem
       colStart={1}
-      colEnd={3}
+      colEnd={{sm: 20, md: 3}}
       rowStart={1}
-      rowEnd={20}
-      position="fixed"
+      rowEnd={{sm: 3, md: 20}}
+      position={{sm: "static", md: "fixed"}}
     >
       <Box
         display="flex"
-        flexDirection="column"
+        flexDirection={{sm: "row", md: "column"}}
         justifyContent="space-between"
-        h="100vh"
+        h={{sm: "auto", md: "100vh"}}
+        w={{sm: "100vw", md: "auto"}}
       >
-        <Box>
-          <Heading
-            as="p"
-            display="flex"
-            flexDirection="row"
-            justifyContent="start"
-            fontSize="4xl"
-            fontWeight="700"
-            color={colorMode === "light" ? colors.accentLight : colors.accentDark}
-            pb={6}
-            zIndex="2"
-          >DK
-          </Heading>
-          <Navigation currentPage={currentPage} handlePageChange={handlePageChange} colorMode={colorMode} colors={colors} />
+        <Box
+          w={{sm: "100%", md: "auto"}}
+        >
+          <Show above='md'>
+            <Heading
+              as="p"
+              display="flex"
+              flexDirection="row"
+              justifyContent={{sm: "center", md: "start"}}
+              fontSize="4xl"
+              fontWeight="700"
+              color={colorMode === "light" ? colors.accentLight : colors.accentDark}
+              pb={6}
+              zIndex="2"
+            >DK
+            </Heading>
+          </Show>
+          <Navigation currentPage={currentPage} handlePageChange={handlePageChange} colorMode={colorMode} colors={colors} setColorMode={setColorMode} />
           <Box
             zIndex="2"
             pt={2}
           >
-            <Links colorMode={colorMode} colors={colors} />
+            <Show above='md'>
+              <Links colorMode={colorMode} colors={colors} />
+            </Show>
         </Box>
         </Box>
         
@@ -47,7 +54,9 @@ function Header({ currentPage, handlePageChange, setColorMode, colorMode, colors
           zIndex="2"  
           pl={3}
         >
-          <Controls colorMode={colorMode} colors={colors} setColorMode={setColorMode} />
+          <Show above='md'>
+            <Controls colorMode={colorMode} colors={colors} setColorMode={setColorMode} />
+          </Show>
         </Box>
       </Box>
     </GridItem>

@@ -14,7 +14,7 @@ function Links({colorMode, colors}) {
             flexDirection="row"
             justifyContent="start"
             alignItems="start"
-            alignSelf="end"
+            alignSelf={{base: "center", md: "end"}}
         >
             <IconContext.Provider value={{ color: colorMode === "light" ? (ghHover === true ? colors.linkActiveLight : colors.linkStandardLight) : (ghHover === true ? colors.linkActiveDark : colors.linkStandardDark), size: "2em" }}>
                 <Box

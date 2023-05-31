@@ -73,8 +73,8 @@ function Portfolio({colorMode, colors}) {
   // returns  code   to be rendered by looping through projects and building a card for  each (using project  component)
   return (
       <GridItem
-        colStart={3}
-        colEnd={19}
+        colStart={{base: 1, md: 3}}
+        colEnd={{base: 21, md: 19}}
         rowStart={1}
         rowEnd={20}
         display="flex"
@@ -82,15 +82,15 @@ function Portfolio({colorMode, colors}) {
         alignItems="center"
         justifyContent="start"
         zIndex="2"
-        pl={24}
+        pl={{base: 0, md: 24}}
       >
         <Heading
-          fontSize="7xl"
+          fontSize={{base: "6xl", md: "7xl"}}
           fontWeight="700"
           color={colorMode === "light" ? colors.accentLight : colors.accentDark}
           textAlign="center"
           zIndex="2"
-          alignSelf="start"
+          alignSelf={{base: "center", md: "start"}}
           mb={3}
           mt={14}
         >
@@ -106,7 +106,7 @@ function Portfolio({colorMode, colors}) {
           mb={6}
           mt={9}
           display={moreVisible ? "none" : "block"}
-          fontSize="2xl"
+          fontSize={{base: "1xl", md: "2xl"}}
           zIndex="2"
           borderColor={colorMode === "light" ? colors.standardLight : colors.standardDark}
           borderWidth="2px"
@@ -128,12 +128,12 @@ function Portfolio({colorMode, colors}) {
           flexDirection="column"
         >
           <Heading
-            fontSize="7xl"
+            fontSize={{base: "6xl", md: "7xl"}}
             fontWeight="700"
             color={colorMode === "light" ? colors.accentLight : colors.accentDark}
             textAlign="center"
             zIndex="2"
-            alignSelf="start"
+            alignSelf={{base: "center", md: "start"}}
             mb={3}
             mt={14}
           >
@@ -141,7 +141,7 @@ function Portfolio({colorMode, colors}) {
           </Heading>
           <Box
             display="flex"
-            flexDirection="row"
+            flexDirection={{base: "column", md: "row"}}
             alignItems="center"
             justifyContent="space-between"
             flexWrap="wrap"
@@ -156,7 +156,7 @@ function Portfolio({colorMode, colors}) {
             px={6}
             mb={6}
             mt={9}
-            fontSize="2xl"
+            fontSize={{base: "1xl", md: "2xl"}}
             zIndex="2"
             borderColor={colorMode === "light" ? colors.standardLight : colors.standardDark}
             borderWidth="2px"

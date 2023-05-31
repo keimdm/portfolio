@@ -17,12 +17,12 @@ function Home({ currentPage, handlePageChange, colorMode, colors }) {
     >
       <Box
         display="flex"
-        flexDirection="row"
+        flexDirection={{base: "column", md: "row"}}
         justifyContent="center"
         alignItems="baseline"
       >
         <Heading
-          fontSize="7xl"
+          fontSize={{base: "6xl", md: "7xl"}}
           color={colorMode === "light" ? colors.standardLight : colors.standardDark}
           fontWeight="300"
           zIndex="2"
