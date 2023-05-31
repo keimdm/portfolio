@@ -15,7 +15,7 @@ function BigProject({item, index, colorMode, colors}) {
         backgroundColor={colorMode === "light" ? colors.backgroundLight : colors.backgroundDark}
         px={5}
         py={5}
-        maxWidth={{base: "70%", md: "50%"}}
+        maxWidth={{base: "80%", md: "50%"}}
         boxShadow="base"
       >
         <Image
@@ -27,7 +27,7 @@ function BigProject({item, index, colorMode, colors}) {
       <Box
         display="flex"
         flexDirection="column"
-        maxWidth={{base: "70%", md: "50%"}}
+        maxWidth={{base: "80%", md: "50%"}}
         justifyContent="space-between"
         px={5}
         py={5}
@@ -43,7 +43,7 @@ function BigProject({item, index, colorMode, colors}) {
         <Text
           color={colorMode === "light" ? colors.standardLight : colors.standardDark}
           pb={3}
-          fontSize={{base: "1xl", md: "2xl"}}
+          fontSize={{base: "xl", md: "2xl"}}
           zIndex="2"
         >
           {item.description}<br></br><br></br>{item.skills}
@@ -58,7 +58,7 @@ function BigProject({item, index, colorMode, colors}) {
             mb={6}
             ml={{base: 0, md: 5}}
             as="a"
-            fontSize={{base: "1xl", md: "2xl"}}
+            fontSize={{base: "xl", md: "2xl"}}
             href={item.github}
             zIndex="2"
             borderColor={colorMode === "light" ? colors.standardLight : colors.standardDark}
@@ -81,7 +81,7 @@ function BigProject({item, index, colorMode, colors}) {
             mb={6}
             ml={5}
             as="a"
-            fontSize={{base: "1xl", md: "2xl"}}
+            fontSize={{base: "xl", md: "2xl"}}
             href={item.deployed}
             zIndex="2"
             borderColor={colorMode === "light" ? colors.standardLight : colors.standardDark}

@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import {
   ChakraProvider,
-  Grid
+  Grid,
+  Show,
+  Hide
 } from '@chakra-ui/react';
 import Header from './components/Header';
+import MobileHeader from './components/MobileHeader';
 import Footer from './components/Footer';
 import CloudAlt from './components/CloudAlt';
 import About from './components/pages/About';
@@ -94,7 +97,12 @@ function App() {
             <CloudAlt cloudEntry={cloudEntry} index={index} leftValue={lefts[index]} currentPage={currentPage} colorMode={colorMode} colors={colors}/>
           ))
         }
-        <Header currentPage={currentPage} handlePageChange={handlePageChange} colorMode={colorMode} setColorMode={setColorMode} colors={colors} />
+        <Show above='md'>
+          <Header currentPage={currentPage} handlePageChange={handlePageChange} colorMode={colorMode} setColorMode={setColorMode} colors={colors} />
+        </Show>
+        <Hide above='md'>
+          <MobileHeader currentPage={currentPage} handlePageChange={handlePageChange} colorMode={colorMode} setColorMode={setColorMode} colors={colors} />
+        </Hide>
         {renderPage()}
         <Footer colorMode={colorMode} colors={colors} />
       </Grid>

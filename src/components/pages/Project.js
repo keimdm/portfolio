@@ -7,7 +7,7 @@ function Project({item, index, colorMode, colors}) {
     <Box
       display="flex"
       flexDirection="column"
-      maxWidth={{base: "70%", md: "48%"}}
+      maxWidth={{base: "80%", md: "48%"}}
       mb={{base: 9, md: 0}}
     >
       <Heading
@@ -41,7 +41,7 @@ function Project({item, index, colorMode, colors}) {
           px={6}
           mb={6}
           as="a"
-          fontSize={{base: "1xl", md: "2xl"}}
+          fontSize={{base: "xl", md: "2xl"}}
           href={item.github}
           zIndex="2"
           borderColor={colorMode === "light" ? colors.standardLight : colors.standardDark}
@@ -49,6 +49,7 @@ function Project({item, index, colorMode, colors}) {
           color={colorMode === "light" ? colors.standardLight : colors.standardDark}
           borderRadius="10px"
           alignSelf="center"
+          textAlign="center"
           _hover={{
             backgroundColor: colorMode === "light" ? colors.accentLight : colors.accentDark,
             borderColor: colorMode === "light" ? colors.accentLight : colors.accentDark,
@@ -63,7 +64,7 @@ function Project({item, index, colorMode, colors}) {
           mb={6}
           ml={5}
           as="a"
-          fontSize={{base: "1xl", md: "2xl"}}
+          fontSize={{base: "xl", md: "2xl"}}
           href={item.deployed}
           zIndex="2"
           borderColor={colorMode === "light" ? colors.standardLight : colors.standardDark}
@@ -71,6 +72,7 @@ function Project({item, index, colorMode, colors}) {
           color={colorMode === "light" ? colors.standardLight : colors.standardDark}
           borderRadius="10px"
           alignSelf="center"
+          textAlign="center"
           _hover={{
             backgroundColor: colorMode === "light" ? colors.accentLight : colors.accentDark,
             borderColor: colorMode === "light" ? colors.accentLight : colors.accentDark,

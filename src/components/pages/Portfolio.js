@@ -106,7 +106,7 @@ function Portfolio({colorMode, colors}) {
           mb={6}
           mt={9}
           display={moreVisible ? "none" : "block"}
-          fontSize={{base: "1xl", md: "2xl"}}
+          fontSize={{base: "xl", md: "2xl"}}
           zIndex="2"
           borderColor={colorMode === "light" ? colors.standardLight : colors.standardDark}
           borderWidth="2px"
@@ -156,7 +156,7 @@ function Portfolio({colorMode, colors}) {
             px={6}
             mb={6}
             mt={9}
-            fontSize={{base: "1xl", md: "2xl"}}
+            fontSize={{base: "xl", md: "2xl"}}
             zIndex="2"
             borderColor={colorMode === "light" ? colors.standardLight : colors.standardDark}
             borderWidth="2px"

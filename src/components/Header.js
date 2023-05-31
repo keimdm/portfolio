@@ -9,16 +9,17 @@ function Header({ currentPage, handlePageChange, setColorMode, colorMode, colors
 
   return (
     <GridItem
-      colStart={1}
-      colEnd={{sm: 2, md: 3}}
+      colStart={{base: 1, md: 3}}
+      colEnd={{base: 21, md: 19}}
       rowStart={1}
       rowEnd={{sm: 1, md: 20}}
       position={{sm: "static", md: "fixed"}}
+      pl={3}
     >
       <Box
         display="flex"
         flexDirection={{sm: "row", md: "column"}}
-        justifyContent={{sm: "center", md: "space-between"}}
+        justifyContent={{sm: "space-between", md: "space-between"}}
         h={{sm: "auto", md: "100vh"}}
         w={{sm: window.innerWidth, md: "auto"}}
       >

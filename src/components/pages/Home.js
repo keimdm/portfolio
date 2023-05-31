@@ -7,13 +7,14 @@ function Home({ currentPage, handlePageChange, colorMode, colors }) {
   return (
     <GridItem
       colStart={{base: 1, md: 3}}
-      colEnd={{base: 2, md: 19}}
-      rowStart={{base: 1, md: 1}}
-      rowEnd={{base: 2, md: 20}}
+      colEnd={{base: 21, md: 19}}
+      rowStart={1}
+      rowEnd={20}
       display="flex"
       flexDirection="column"
-      alignItems="end"
+      alignItems={{base: "center", md: "end"}}
       justifyContent="end"
+      pl={{base: 0, md: 24}}
     >
       <Box
         display="flex"
@@ -22,7 +23,7 @@ function Home({ currentPage, handlePageChange, colorMode, colors }) {
         alignItems="baseline"
       >
         <Heading
-          fontSize={{base: "6xl", md: "7xl"}}
+          fontSize={{base: "5xl", md: "7xl"}}
           color={colorMode === "light" ? colors.standardLight : colors.standardDark}
           fontWeight="300"
           zIndex="2"
@@ -30,7 +31,7 @@ function Home({ currentPage, handlePageChange, colorMode, colors }) {
           Hello, I'm&nbsp;&nbsp;
         </Heading>
         <Heading
-            fontSize="9xl"
+            fontSize={{base: "8xl", md: "9xl"}}
             color={colorMode === "light" ? colors.accentLight : colors.accentDark}
             fontWeight="700"
             zIndex="2"
@@ -42,7 +43,7 @@ function Home({ currentPage, handlePageChange, colorMode, colors }) {
         color={colorMode === "light" ? colors.standardLight : colors.standardDark}
         pb={3}
         mb={6}
-        fontSize="2xl"
+        fontSize={{base: "xl", md: "2xl"}}
         zIndex="2"
       >
         Full Stack Web Developer, Python, Web Design

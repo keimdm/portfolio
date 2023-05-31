@@ -18,7 +18,7 @@ function Navigation({ currentPage, handlePageChange, colorMode, colors, setColor
                 color={currentPage === 'home' ? (colorMode === "light" ? colors.accentLight : colors.accentDark) : (colorMode === "light" ? colors.standardLight : colors.standardDark)}
                 fontWeight={currentPage === 'home' ? 'bold' : 'normal'}
                 pb={3}
-                fontSize="2xl"
+                fontSize={{base: "xl", md: "2xl"}}
                 zIndex={{base: "3", md: "2"}}
                 _hover={{
                     color: colorMode === "light" ? colors.accentLight : colors.accentDark
@@ -32,7 +32,7 @@ function Navigation({ currentPage, handlePageChange, colorMode, colors, setColor
                 color={currentPage === 'about-me' ? (colorMode === "light" ? colors.accentLight : colors.accentDark) : (colorMode === "light" ? colors.standardLight : colors.standardDark)}
                 fontWeight={currentPage === 'about-me' ? 'bold' : 'normal'}
                 pb={3}
-                fontSize="2xl"
+                fontSize={{base: "xl", md: "2xl"}}
                 zIndex={{base: "3", md: "2"}}
                 _hover={{
                     color: colorMode === "light" ? colors.accentLight : colors.accentDark
@@ -46,7 +46,7 @@ function Navigation({ currentPage, handlePageChange, colorMode, colors, setColor
                 color={currentPage === 'portfolio' ? (colorMode === "light" ? colors.accentLight : colors.accentDark) : (colorMode === "light" ? colors.standardLight : colors.standardDark)}
                 fontWeight={currentPage === 'portfolio' ? 'bold' : 'normal'}
                 pb={3}
-                fontSize="2xl"
+                fontSize={{base: "xl", md: "2xl"}}
                 zIndex={{base: "3", md: "2"}}
                 _hover={{
                     color: colorMode === "light" ? colors.accentLight : colors.accentDark

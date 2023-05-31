@@ -40,7 +40,7 @@ function About({colorMode, colors}) {
             backgroundColor={colorMode === "light" ? colors.backgroundLight : colors.backgroundDark}
             px={5}
             py={5}
-            maxWidth={{base: "70%", md: "50%"}}
+            maxWidth={{base: "80%", md: "50%"}}
             boxShadow="base"
           >
             <Image
@@ -52,7 +52,7 @@ function About({colorMode, colors}) {
           <Box
             display="flex"
             flexDirection="column"
-            maxWidth={{base: "70%", md: "50%"}}
+            maxWidth={{base: "80%", md: "50%"}}
             justifyContent="space-between"
             px={5}
             py={5}
@@ -60,7 +60,7 @@ function About({colorMode, colors}) {
             <Text
               color={colorMode === "light" ? colors.standardLight : colors.standardDark}
               pb={3}
-              fontSize={{base: "1xl", md: "2xl"}}
+              fontSize={{base: "xl", md: "2xl"}}
               zIndex="2"
             >
               Full stack web developer based in NYC with background in chemical engineering and management consulting.<br></br><br></br>Interested in designing games, music, and good food.
@@ -69,7 +69,7 @@ function About({colorMode, colors}) {
               px={6}
               mb={6}
               as="a"
-              fontSize={{base: "1xl", md: "2xl"}}
+              fontSize={{base: "xl", md: "2xl"}}
               href="https://drive.google.com/file/d/1vI5HW-Z7eMg4IGimtN41F95RE3Zdgmit/view?usp=sharing"
               zIndex="2"
               borderColor={colorMode === "light" ? colors.standardLight : colors.standardDark}
@@ -77,6 +77,7 @@ function About({colorMode, colors}) {
               color={colorMode === "light" ? colors.standardLight : colors.standardDark}
               borderRadius="10px"
               alignSelf="center"
+              textAlign="center"
               _hover={{
                 backgroundColor: colorMode === "light" ? colors.accentLight : colors.accentDark,
                 borderColor: colorMode === "light" ? colors.accentLight : colors.accentDark,
