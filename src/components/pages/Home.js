@@ -6,10 +6,10 @@ function Home({ currentPage, handlePageChange, colorMode, colors }) {
   
   return (
     <GridItem
-      colStart={3}
-      colEnd={19}
-      rowStart={1}
-      rowEnd={20}
+      colStart={{base: 1, md: 3}}
+      colEnd={{base: 2, md: 19}}
+      rowStart={{base: 1, md: 1}}
+      rowEnd={{base: 2, md: 20}}
       display="flex"
       flexDirection="column"
       alignItems="end"

@@ -80,13 +80,14 @@ function App() {
   return (
     <ChakraProvider theme={theme}>
       <Grid
-        minH='100vh'
-        w="100%"
+        minH={{base: window.innerHeight, md: '100vh'}}
+        w={{base: "100%", md: '100%'}}
         bgGradient={colorMode === "light" ? colors.gradientLight : colors.gradientDark}
         px={5}
         py={2}
-        templateColumns='repeat(20, 1fr)'
-        templateRows='repeat(19, 1fr) 25px'
+        templateColumns={{base: "repeat(1, 1fr)", md: 'repeat(20, 1fr)'}}
+        templateRows={{base: "repeat(1, 1fr) 25px", md: 'repeat(19, 1fr) 25px'}}
+
       >
         {
           clouds.map((cloudEntry, index) => (
