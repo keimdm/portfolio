@@ -1,13 +1,15 @@
+// music controls commented out for now
+
 import React, { useState } from 'react';
 import { Box } from "@chakra-ui/react"
-import { VscColorMode, VscUnmute, VscMute } from "react-icons/vsc";
+import { VscColorMode, /*VscUnmute, VscMute*/ } from "react-icons/vsc";
 import { IconContext } from "react-icons";
 
 function Controls({colorMode, colors, setColorMode}) {
 
     const [mode, setMode] = useState(false);
-    const [music, setMusic] = useState(false);
-    const [playing, setPlaying] = useState(false);
+    //const [music, setMusic] = useState(false);
+    //const [playing, setPlaying] = useState(false);
 
     const handleToggle = () => {
         window.localStorage.setItem("dkPortfolioColorMode", colorMode);
@@ -38,10 +40,12 @@ function Controls({colorMode, colors, setColorMode}) {
                     }}
                     zIndex={{base: "3", md: "2"}}
                     mr={{base: 3, md: 0}}
+                    mb={{base: 0, md: 16}}
                 >
                     <VscColorMode />
                 </Box>
             </IconContext.Provider>
+            {/*}
             <IconContext.Provider value={{ color: colorMode === "light" ? (music === true ? colors.linkActiveLight : colors.linkStandardLight) : (music === true ? colors.linkActiveDark : colors.linkStandardDark), size: "2em" }}>
                 <Box
                     onClick={() => setPlaying(false)}
@@ -69,7 +73,7 @@ function Controls({colorMode, colors, setColorMode}) {
                 >
                     <VscMute />
                 </Box>
-            </IconContext.Provider>
+                </IconContext.Provider>{*/}
         </Box>
     );
 }

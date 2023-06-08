@@ -16,15 +16,15 @@ function About({colorMode, colors}) {
         alignItems="center"
         justifyContent="start"
         zIndex="2"
-        pl={{base: 0, md: 24}}
+        pl={{base: 0, lg: 24}}
       >
         <Heading
-          fontSize={{base: "6xl", md: "7xl"}}
+          fontSize={{base: "6xl", lg: "7xl"}}
           fontWeight="700"
           color={colorMode === "light" ? colors.accentLight : colors.accentDark}
           textAlign="center"
           zIndex="2"
-          alignSelf={{base: "center", md: "start"}}
+          alignSelf={{base: "center", lg: "start"}}
           mb={3}
           mt={14}
         >
@@ -32,15 +32,15 @@ function About({colorMode, colors}) {
         </Heading>
         <Box
           display="flex"
-          flexDirection={{base: "column", md: "row"}}
-          alignItems={{base: "center", md: "auto"}}
+          flexDirection={{base: "column", lg: "row"}}
+          alignItems={{base: "center", lg: "auto"}}
         >
           <Box
             borderRadius='10px'
             backgroundColor={colorMode === "light" ? colors.backgroundLight : colors.backgroundDark}
             px={5}
             py={5}
-            maxWidth={{base: "80%", md: "50%"}}
+            maxWidth={{base: "80%", lg: "50%"}}
             boxShadow="base"
           >
             <Image
@@ -52,7 +52,7 @@ function About({colorMode, colors}) {
           <Box
             display="flex"
             flexDirection="column"
-            maxWidth={{base: "80%", md: "50%"}}
+            maxWidth={{base: "80%", lg: "50%"}}
             justifyContent="space-between"
             px={5}
             py={5}
@@ -60,16 +60,16 @@ function About({colorMode, colors}) {
             <Text
               color={colorMode === "light" ? colors.standardLight : colors.standardDark}
               pb={3}
-              fontSize={{base: "xl", md: "2xl"}}
+              fontSize={{base: "xl", lg: "2xl"}}
               zIndex="2"
             >
-              Full stack web developer based in NYC with background in chemical engineering and management consulting.<br></br><br></br>Interested in designing games, music, and good food.
+              Full stack web developer based in NYC bringing a strong and varied background in management consulting and design to better inform and optimize my approach to coding.<br></br><br></br>Interested in solving interesting coding challenges, music, and good food.
             </Text>
             <Box
               px={6}
               mb={6}
               as="a"
-              fontSize={{base: "xl", md: "2xl"}}
+              fontSize={{base: "xl", lg: "2xl"}}
               href="https://drive.google.com/file/d/1vI5HW-Z7eMg4IGimtN41F95RE3Zdgmit/view?usp=sharing"
               zIndex="2"
               borderColor={colorMode === "light" ? colors.standardLight : colors.standardDark}
@@ -87,7 +87,7 @@ function About({colorMode, colors}) {
             >
               Download Resume
             </Box>
-            <Hide above='md'>
+            <Hide above='lg'>
               <Links colorMode={colorMode} colors={colors} />
             </Hide>
           </Box>
