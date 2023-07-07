@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import cocktail from '../../assets/cocktail-pic-square.jpg';
 import lifelog from '../../assets/lifelog-pic-square.jpg';
 import weather from '../../assets/weather-pic-square.jpg';
-import music from '../../assets/music-sequencer-square.jpg';
+import dada from '../../assets/dada-square.jpg';
 import tableTennis from '../../assets/table-tennis-pic-square.jpg';
-import ticTacToe from '../../assets/tic-tac-toe-pic-square.jpg';
+import exceed from '../../assets/exceed-square.jpg';
 import Project from './Project';
 import BigProject from './BigProject';
 import { GridItem, Box, Heading } from "@chakra-ui/react"
@@ -17,15 +17,24 @@ function Portfolio({colorMode, colors}) {
   const bigProjects = [
     {
       id: 1,
-      title: "Breezy Cocktail",
+      title: "Exceed",
       github: "https://github.com/keimdm/recipe-search",
       deployed: "https://keimdm.github.io/recipe-search/",
-      image: cocktail,
-      description: "Search for cocktail recipes, save your favorites, and get a daily seasonal cocktail recommendation",
-      skills: "Skills/Technologies Used: HTML5, CSS, Javascript, Cocktail API"
+      image: exceed,
+      description: "Exceed is a spreadsheet training tool that uses a game to teach users how to navigate a spreadsheet efficiently",
+      skills: "Skills/Technologies Used: MERN Stack (ES6), Vite, Chakra UI, React Router, JSON Web Token, bcrypt"
     },
     {
       id: 2,
+      title: "Dada Museum",
+      github: "https://github.com/emmaparis/Project-2",
+      deployed: "https://lifelog.herokuapp.com/",
+      image: dada,
+      description: "Theoretical home page for an imaginary museum dedicated to the Dada art movement of the 1920s",
+      skills: "Skills/Technologies Used: React, Chakra UI, Framer Motion, Art Institute of Chicago API"
+    },
+    {
+      id: 3,
       title: "Lifelog",
       github: "https://github.com/emmaparis/Project-2",
       deployed: "https://lifelog.herokuapp.com/",
@@ -33,38 +42,30 @@ function Portfolio({colorMode, colors}) {
       description: "Create an account, keep track of day to day to-do list items, and set recurring reminders",
       skills: "Skills/Technologies Used: Node.js, Handlebars, Express.js"
     },
+  ]
+
+  const projects = [
+
     {
-      id: 3,
+      id: 1,
+      title: "Breezy Cocktail",
+      github: "https://github.com/keimdm/recipe-search",
+      deployed: "https://keimdm.github.io/recipe-search/",
+      image: cocktail,
+    },
+    {
+      id: 2,
       title: "Weather App",
       github: "https://github.com/keimdm/weather-challenge",
       deployed: "https://keimdm.github.io/weather-challenge/",
       image: weather,
-      description: "Search for cocktail recipes, save your favorites, and get a daily seasonal cocktail recommendation",
-      skills: "Skills/Technologies Used: HTML5, CSS, Javascript, Cocktail API"
-    },
-  ]
-
-  const projects = [
-    {
-      id: 1,
-      title: "Music Sequencer",
-      github: "https://github.com/keimdm/music-sequencer",
-      deployed: "https://keimdm.github.io/music-sequencer/",
-      image: music
     },
     {
-      id: 2,
+      id: 3,
       title: "Table Tennis",
       github: "https://github.com/keimdm/table-tennis",
       deployed: "https://keimdm.github.io/table-tennis/",
       image: tableTennis
-    },
-    {
-      id: 3,
-      title: "Tic-Tac-Toe",
-      github: "https://github.com/keimdm/tic-tac-toe",
-      deployed: "https://keimdm.github.io/tic-tac-toe/",
-      image: ticTacToe
     },
   ]
 
