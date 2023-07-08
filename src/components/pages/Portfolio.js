@@ -18,8 +18,8 @@ function Portfolio({colorMode, colors}) {
     {
       id: 1,
       title: "Exceed",
-      github: "https://github.com/keimdm/recipe-search",
-      deployed: "https://keimdm.github.io/recipe-search/",
+      github: "https://github.com/keimdm/exceed-game",
+      deployed: "https://exceed-game-957f84648e44.herokuapp.com/",
       image: exceed,
       description: "Exceed is a spreadsheet training tool that uses a game to teach users how to navigate a spreadsheet efficiently",
       skills: "Skills/Technologies Used: MERN Stack (ES6), Vite, Chakra UI, React Router, JSON Web Token, bcrypt"
@@ -27,8 +27,8 @@ function Portfolio({colorMode, colors}) {
     {
       id: 2,
       title: "Dada Museum",
-      github: "https://github.com/emmaparis/Project-2",
-      deployed: "https://lifelog.herokuapp.com/",
+      github: "https://github.com/ColdWeatherBoyy/dada-museum",
+      deployed: "https://dada-museum.herokuapp.com/",
       image: dada,
       description: "Theoretical home page for an imaginary museum dedicated to the Dada art movement of the 1920s",
       skills: "Skills/Technologies Used: React, Chakra UI, Framer Motion, Art Institute of Chicago API"
@@ -39,8 +39,8 @@ function Portfolio({colorMode, colors}) {
       github: "https://github.com/emmaparis/Project-2",
       deployed: "https://lifelog.herokuapp.com/",
       image: lifelog,
-      description: "Create an account, keep track of day to day to-do list items, and set recurring reminders",
-      skills: "Skills/Technologies Used: Node.js, Handlebars, Express.js"
+      description: "Organization app for users to make todo lists and add notes to them",
+      skills: "Skills/Technologies Used: Express, Node, Handlebars, MVC framework, Express Sessions, MySQL, Sequelize, CRUD operations"
     },
   ]
 
