@@ -4,6 +4,7 @@ import lifelog from '../../assets/lifelog-pic-square.jpg';
 import weather from '../../assets/weather-pic-square.jpg';
 import dada from '../../assets/dada-square.jpg';
 import tableTennis from '../../assets/table-tennis-pic-square.jpg';
+import ticTacToe from '../../assets/tic-tac-toe-pic-square.jpg';
 import exceed from '../../assets/exceed-square.jpg';
 import Project from './Project';
 import BigProject from './BigProject';
@@ -66,6 +67,13 @@ function Portfolio({colorMode, colors}) {
       github: "https://github.com/keimdm/table-tennis",
       deployed: "https://keimdm.github.io/table-tennis/",
       image: tableTennis
+    },
+    {
+      id: 4,
+      title: "Tic-Tac-Toe",
+      github: "https://github.com/keimdm/tic-tac-toe",
+      deployed: "https://keimdm.github.io/tic-tac-toe/",
+      image: ticTacToe
     },
   ]
 
@@ -138,7 +146,7 @@ function Portfolio({colorMode, colors}) {
             mb={3}
             mt={14}
           >
-            More Projects
+            Bootcamp Classwork
           </Heading>
           <Box
             display="flex"

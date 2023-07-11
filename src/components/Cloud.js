@@ -88,8 +88,10 @@ function Cloud({cloudEntry, index, leftValue, currentPage}) {
     };
 
     const handleClick = () => {
-        console.log("click")
-        window.open(cloudEntry.link, '_blank');
+        console.log("click");
+        if (window.innerWidth > 480) {
+            window.open(cloudEntry.link, '_blank');
+        }
     };
 
     return (
