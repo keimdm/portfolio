@@ -70,7 +70,7 @@ function About({colorMode, colors}) {
               mb={6}
               as="a"
               fontSize={{base: "xl", lg: "2xl"}}
-              href="https://drive.google.com/file/d/1vI5HW-Z7eMg4IGimtN41F95RE3Zdgmit/view?usp=sharing"
+              href="https://drive.google.com/file/d/1V35gc-Pthz-UCOaODmW7zBwW_gyIkQQB/view?usp=sharing"
               zIndex="2"
               borderColor={colorMode === "light" ? colors.standardLight : colors.standardDark}
               borderWidth="2px"

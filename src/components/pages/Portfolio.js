@@ -40,7 +40,7 @@ function Portfolio({colorMode, colors}) {
       github: "https://github.com/emmaparis/Project-2",
       deployed: "https://lifelog.herokuapp.com/",
       image: lifelog,
-      description: "Organization app for users to make todo lists and add notes to them",
+      description: "Organization app for users to make to-do lists and add notes to them",
       skills: "Skills/Technologies Used: Express, Node, Handlebars, MVC framework, Express Sessions, MySQL, Sequelize, CRUD operations"
     },
   ]
