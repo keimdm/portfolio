@@ -63,7 +63,7 @@ function About({colorMode, colors}) {
               fontSize={{base: "xl", lg: "2xl"}}
               zIndex="2"
             >
-              Full stack web developer based in NYC. Bringing a strong and varied background in management consulting, engineering, and design to better inform and optimize my approach to coding.
+              Strong and varied background in management consulting, engineering, and design, all of which help to better inform and optimize my approach to work.
             </Text>
             <Box
               px={6}

@@ -46,7 +46,7 @@ function Home({ currentPage, handlePageChange, colorMode, colors }) {
         fontSize={{base: "xl", md: "2xl"}}
         zIndex="2"
       >
-        Full Stack Web Developer, Python, Web Design
+        Business operations, analytics and coding
       </Text>
     </GridItem>
   );
